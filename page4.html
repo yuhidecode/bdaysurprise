@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okay Enough Emotions 💀</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #fff4e8;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #5c3322;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            padding: 30px;
+            animation: appear 1s ease;
+        }
+
+        h1 {
+            color: #e87532;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #d95f20;
+            line-height: 1.4;
+            margin: 25px 0;
+        }
+
+        .ending {
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 25px;
+            background: #e87532;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.07);
+            background: #d95f20;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 1.8rem;
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        .one {
+            top: 12%;
+            left: 12%;
+        }
+
+        .two {
+            top: 20%;
+            right: 13%;
+            animation-delay: 1s;
+        }
+
+        .three {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+
+        .four {
+            bottom: 12%;
+            right: 14%;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(5deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .intro {
+                font-size: 1.1rem;
+            }
+
+            .question {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="emoji one">💀</div>
+    <div class="emoji two">😭</div>
+    <div class="emoji three">🧡</div>
+    <div class="emoji four">✨</div>
+
+    <div class="container">
+
+        <h1>Okay enough emotions 💀</h1>
+
+        <div class="intro">
+            We need to talk about something more important.
+        </div>
+
+        <div class="question">
+            How are you still tolerating me after 7 years??? 💀
+        </div>
+
+        <div class="ending">
+            Honestly, respect.<br>
+            Couldn't have survived this long without your patience 😭
+        </div>
+
+        <a href="page5.html" class="button">
+            there's more nonsense →
+        </a>
+
+    </div>
+
+</body>
+</html>

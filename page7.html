@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Last Thing 🎉</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #fff4e8;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #5c3322;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .lie {
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: appear 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .birthday {
+            margin-top: 25px;
+            font-size: clamp(2.5rem, 9vw, 5.5rem);
+            font-weight: bold;
+            color: #e87532;
+            opacity: 0;
+            transform: scale(0.4);
+            animation: birthdayPop 0.8s cubic-bezier(.17,.67,.35,1.4) forwards;
+            animation-delay: 2s;
+        }
+
+        .subtext {
+            margin-top: 20px;
+            font-size: 1rem;
+            opacity: 0;
+            animation: appear 1s ease forwards;
+            animation-delay: 2.8s;
+        }
+
+        /* Party poppers */
+        .popper {
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0;
+            z-index: 5;
+        }
+
+        .popper.left {
+            left: 5%;
+            top: 45%;
+            transform: rotate(-25deg);
+            animation: popLeft 0.8s ease-out forwards;
+            animation-delay: 1.7s;
+        }
+
+        .popper.right {
+            right: 5%;
+            top: 45%;
+            transform: rotate(25deg) scaleX(-1);
+            animation: popRight 0.8s ease-out forwards;
+            animation-delay: 1.7s;
+        }
+
+        /* Falling flowers */
+        .flower {
+            position: absolute;
+            top: -60px;
+            font-size: 2rem;
+            animation: fall linear forwards;
+            opacity: 0;
+        }
+
+        .f1 {
+            left: 8%;
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+
+        .f2 {
+            left: 22%;
+            animation-duration: 4s;
+            animation-delay: 2.4s;
+        }
+
+        .f3 {
+            left: 38%;
+            animation-duration: 5.5s;
+            animation-delay: 2.1s;
+        }
+
+        .f4 {
+            left: 55%;
+            animation-duration: 4.5s;
+            animation-delay: 2.6s;
+        }
+
+        .f5 {
+            left: 72%;
+            animation-duration: 5s;
+            animation-delay: 2.2s;
+        }
+
+        .f6 {
+            left: 88%;
+            animation-duration: 4.2s;
+            animation-delay: 2.7s;
+        }
+
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 18px;
+            top: -30px;
+            opacity: 0;
+            animation: confettiFall linear forwards;
+        }
+
+        .c1 {
+            left: 10%;
+            animation-delay: 1.8s;
+            animation-duration: 3.5s;
+            transform: rotate(20deg);
+        }
+
+        .c2 {
+            left: 18%;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            transform: rotate(70deg);
+        }
+
+        .c3 {
+            left: 30%;
+            animation-delay: 1.7s;
+            animation-duration: 3.7s;
+            transform: rotate(40deg);
+        }
+
+        .c4 {
+            left: 45%;
+            animation-delay: 2.2s;
+            animation-duration: 4.2s;
+            transform: rotate(90deg);
+        }
+
+        .c5 {
+            left: 60%;
+            animation-delay: 1.9s;
+            animation-duration: 3.8s;
+            transform: rotate(30deg);
+        }
+
+        .c6 {
+            left: 75%;
+            animation-delay: 2.3s;
+            animation-duration: 4.3s;
+            transform: rotate(65deg);
+        }
+
+        .c7 {
+            left: 90%;
+            animation-delay: 1.8s;
+            animation-duration: 3.6s;
+            transform: rotate(15deg);
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes birthdayPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.4);
+            }
+
+            70% {
+                opacity: 1;
+                transform: scale(1.12);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes popLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-80px) rotate(-25deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotate(-25deg);
+            }
+        }
+
+        @keyframes popRight {
+            0% {
+                opacity: 0;
+                transform: translateX(80px) rotate(25deg) scaleX(-1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0) rotate(25deg) scaleX(-1);
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.9;
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        @keyframes confettiFall {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .popper {
+                font-size: 2.8rem;
+            }
+
+            .subtext {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Flowers -->
+    <div class="flower f1">🌸</div>
+    <div class="flower f2">🌼</div>
+    <div class="flower f3">🌷</div>
+    <div class="flower f4">🌸</div>
+    <div class="flower f5">🌼</div>
+    <div class="flower f6">🌷</div>
+
+    <!-- Confetti -->
+    <div class="confetti c1">🎊</div>
+    <div class="confetti c2">✨</div>
+    <div class="confetti c3">🎉</div>
+    <div class="confetti c4">🧡</div>
+    <div class="confetti c5">✨</div>
+    <div class="confetti c6">🎊</div>
+    <div class="confetti c7">🎉</div>
+
+    <!-- Party poppers -->
+    <div class="popper left">🎉</div>
+    <div class="popper right">🎉</div>
+
+    <div class="container">
+
+        <div class="lie">
+            I lied.
+        </div>
+
+        <div class="birthday">
+            HAPPY BIRTHDAY 🧡
+        </div>
+
+        <div class="subtext">
+            okay NOW we're done 😭
+        </div>
+
+    </div>
+
+</body>
+</html>

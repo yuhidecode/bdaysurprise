@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Sansku 🧡</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #fff1df;
+            font-family: "Trebuchet MS", sans-serif;
+            color: #713b22;
+        }
+
+        .page {
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+            position: relative;
+        }
+
+        .note {
+            width: min(90%, 600px);
+
+            background: #fffaf3;
+            padding: 55px 45px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 30px rgba(130, 70, 30, 0.12);
+
+            text-align: center;
+
+            position: relative;
+
+            animation: appear 1s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px) rotate(-1deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        .tiny-heart {
+            font-size: 28px;
+            color: #e87525;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-family: Georgia, serif;
+            font-size: clamp(20px, 4vw, 27px);
+            line-height: 1.7;
+        }
+
+        .highlight {
+            color: #e87525;
+            font-weight: bold;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #e87525;
+            font-weight: bold;
+        }
+
+        .next-btn {
+            display: inline-block;
+
+            margin-top: 35px;
+
+            padding: 11px 24px;
+
+            background: #e87525;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-3px);
+            background: #d96218;
+        }
+
+        /* Cute little decorations */
+
+        .decoration {
+            position: absolute;
+            color: #e87525;
+            font-size: 25px;
+
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .one {
+            top: 12%;
+            left: 10%;
+        }
+
+        .two {
+            top: 18%;
+            right: 12%;
+            animation-delay: 1s;
+        }
+
+        .three {
+            bottom: 15%;
+            left: 14%;
+            animation-delay: 2s;
+        }
+
+        .four {
+            bottom: 18%;
+            right: 13%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .note {
+                padding: 40px 25px;
+            }
+
+            .message {
+                font-size: 20px;
+            }
+
+            .decoration {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- Decorations -->
+
+        <div class="decoration one">♡</div>
+        <div class="decoration two">✦</div>
+        <div class="decoration three">♡</div>
+        <div class="decoration four">✧</div>
+
+
+        <!-- Birthday note -->
+
+        <div class="note">
+
+            <div class="tiny-heart">🧡</div>
+
+            <p class="message">
+
+                Wish u the <span class="highlight">happiest birthday!</span> 🧡
+                <br>
+
+                Hv a grt grt one today! ✨
+                <br><br>
+
+                Forgive urself for the mistakes you've done.
+                You're entering a new yr of ur life, so leave the past behind
+                and step into this new yr with a fresh heart.
+                <br><br>
+
+                <span class="highlight">Best wishes always! 🧡</span>
+
+            </p>
+
+            <a href="page3.html" class="next-btn">
+                keep going →
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

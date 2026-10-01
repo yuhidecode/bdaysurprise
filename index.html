@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Sansku 🧡</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #fff1df;
+            font-family: "Trebuchet MS", sans-serif;
+            color: #713b22;
+        }
+
+        .page {
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+
+            position: relative;
+        }
+
+        .content {
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 8vw, 75px);
+            color: #e87525;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: clamp(18px, 3vw, 24px);
+            margin-bottom: 25px;
+        }
+
+        .love {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .next-btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #e87525;
+            color: white;
+
+            padding: 12px 25px;
+            border-radius: 30px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            box-shadow: 0 6px 15px rgba(232, 117, 37, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-3px);
+            background: #d96218;
+        }
+
+        /* Cute decorations */
+
+        .flower,
+        .heart {
+            position: absolute;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .flower {
+            font-size: 30px;
+        }
+
+        .heart {
+            font-size: 24px;
+            color: #e87525;
+        }
+
+        .flower1 {
+            top: 12%;
+            left: 10%;
+        }
+
+        .flower2 {
+            top: 18%;
+            right: 12%;
+            animation-delay: 1s;
+        }
+
+        .flower3 {
+            bottom: 15%;
+            left: 14%;
+            animation-delay: 2s;
+        }
+
+        .flower4 {
+            bottom: 18%;
+            right: 13%;
+            animation-delay: 1.5s;
+        }
+
+        .heart1 {
+            top: 25%;
+            left: 25%;
+        }
+
+        .heart2 {
+            bottom: 25%;
+            right: 25%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .flower {
+                font-size: 22px;
+            }
+
+            .heart {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- Cute decorations -->
+        <div class="flower flower1">🌼</div>
+        <div class="flower flower2">🌸</div>
+        <div class="flower flower3">🌷</div>
+        <div class="flower flower4">🌼</div>
+
+        <div class="heart heart1">♡</div>
+        <div class="heart heart2">♡</div>
+
+
+        <!-- Main birthday message -->
+
+        <div class="content">
+
+            <h1>Happy Birthday, Sansku! 🧡</h1>
+
+            <p class="subtitle">
+                Wishing you the happiest birthday ever! ✨
+            </p>
+
+            <p class="love">
+                Love youuu! 🥹🧡
+            </p>
+
+            <a href="page2.html" class="next-btn">
+                keep going →
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
